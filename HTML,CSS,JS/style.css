@@ -1,0 +1,336 @@
+/* Global Css Starts here  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* Fonts */
+    --ff-heading: 'Forum', cursive;
+    --ff-content: 'Poppins', sans-serif;
+    /* Colors */
+    --c-dark: #0f1318;
+    --c-light:#f6f6f6;
+    --cc-dark-alt: #000000a9;
+    --c-gradient:linear-gradient(90deg, #9400D3 0%, #4B0082 100%);
+
+}
+body{
+    background-color: var(--c-dark);
+    color: var(--c-light);
+    font-family: var(--ff-content);
+    overflow-x: hidden;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.heading{
+    font-family: var(--ff-heading);
+}
+.section{
+    padding: 50px 120px;
+}
+
+/* Global Css Ends here  */
+
+/* Navbar Starts here  */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    padding: 20px 120px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cc-dark-alt);
+    backdrop-filter: blur(12px);
+    color: var(--c-light);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar .burger {
+    display: none;
+    
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 800;
+    transition: all 200ms ease-in-out;
+}
+
+.navbar .logo:hover {
+    color: #8e54e9;
+}
+
+.navbar .navLinks {
+    width: 380px;
+}
+
+.navbar .navLinks ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .navLinks .navLink {
+    transition: all 200ms;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.navbar .navLinks .navLink:hover {
+    color: #487fff;
+}
+
+/* Navbar Ends here  */
+
+/* Hero Section starts here */
+.hero{
+    background-image: url(../Assets/bghero.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+}
+
+.hero .heroContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000bd;
+
+}
+
+.hero .heroContent h1{
+    font-size: 120px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(90deg, #FC00FF 0%, #00DBDE 100%););
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero .heroContent p{
+    margin: 16px 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.btn{
+    padding: 16px 32px;
+    margin: 16px 0; 
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 28px;
+    transition: all 200ms ease-in-out;
+}
+
+.btn.btn-primary{
+    background: var(--c-gradient);
+    color: var(--c-light);
+}
+.btn:hover{
+    transform: scale(1.06);
+}
+
+/* Hero Section ends here */
+
+/* About Section starts here */
+.about{
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .left,
+.about .right{
+    width: 50%;
+}
+.about .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.about img{
+    width: 80%;
+    border-radius: 8px;
+}
+
+.about h2{
+    font-size: 96px;
+    background: -webkit-linear-gradient(90deg, #FC00FF 0%, #00DBDE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.about p{
+    margin: 16px 0;
+    font-size: 28px;
+    font-weight: 500;
+}
+/* About Section ends here */
+
+/* Events Section starts here */
+.events h2{
+    font-size: 96px;
+    background: -webkit-linear-gradient(90deg, #FC00FF 0%, #00DBDE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.events .cards{
+    display: flex;
+    flex-wrap: wrap;
+} 
+.events .cards .card{
+    width: 30%;
+    margin: 12px;
+    padding: 24px;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255,255, 0.05);
+    transition: all 180ms ease-in-out;
+} 
+.events .cards .card h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+.events .cards .card p{
+    font-size: 20px;
+    font-weight: 400;
+}
+.events .cards .card:hover{
+    border: 2px solid #FC00FF ;
+    transform: scale(1.06);
+}
+
+/* Events Section ends here */
+
+/* cta Section starts here */
+.cta{
+    width: 100%;
+    height: 30vh;
+    background: -webkit-linear-gradient(45deg, #4776E6 0%, #8E54E9 100%);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.cta h3{
+   font-size: 24px;
+   font-weight: 600;
+
+}
+.cta a{
+  margin: 16px 0;
+}
+
+/* cta Section ends here */
+
+/* Modal starts here  */
+.modal{
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 32px;
+  background-color: var(--cc-dark-alt);
+  border-radius: 8px;
+  backdrop-filter: blur(16px);
+  box-shadow:  0px 0px 10px 0px rgba(255, 255,255, 0.05);
+  
+}
+
+.modal.open{
+     top: 50%;
+}
+.modal h3{
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.modal .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.modal .container input{
+     width: 100%;
+     border: none;
+     outline: none;
+     background: none;
+     margin: 8px 0;
+     padding: 12px 4px;
+     border-bottom: 1px solid #dddddd;
+     color: #8e54e9;
+     font-size: 18px;
+     font-weight: 500;
+     transition: all 100ms ease-in-out;
+ }
+.modal .container input::-webkit-input-placeholder { /* Edge */
+    color:#cccccc;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:#cccccc;
+  }
+  
+  ::placeholder {
+    color:#cccccc;
+  }
+  .modal .container .btn{
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+}
+
+
+
+
+ 
+@media screen and (max-width: 768px) {
+    .navbar .navLinks {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #333333;
+        width: 50%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 200ms;
+        transform: translatex(100%);
+    }
+    .navbar .navLinks ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 40vh;
+    }
+
+    .navbar.open .navLinks {
+        transform: translatex(0%);
+    }
+    .navbar .burger {
+        display: block;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .navbar .burger:hover {
+        color: #487fff;
+    }
+}
